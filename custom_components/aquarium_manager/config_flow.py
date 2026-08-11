@@ -11,10 +11,13 @@ class AquariumManagerConfigFlow(
 ):
     VERSION = 1
 
-    async def async_step_user(self, user_input=None):
+    async def async_step_user(
+        self,
+        user_input=None,
+    ):
         if user_input is not None:
             return self.async_create_entry(
-                title="Aquarium Manager",
+                title=user_input["aquarium_name"],
                 data=user_input,
             )
 
@@ -25,6 +28,11 @@ class AquariumManagerConfigFlow(
                     vol.Required(
                         "aquarium_name",
                         default="My Aquarium",
+                    ): str,
+
+                    vol.Required(
+                        "start_date",
+                        default="2025-01-01",
                     ): str,
                 }
             ),
