@@ -34,6 +34,46 @@ class AquariumManagerConfigFlow(
                         "start_date",
                         default="2025-01-01",
                     ): str,
+
+                    vol.Optional(
+                        "last_water_test_date",
+                    ): str,
+
+                    vol.Optional(
+                        "water_test_interval",
+                    ): int,
+
+                    vol.Optional(
+                        "last_filter_clean_date",
+                    ): str,
+
+                    vol.Optional(
+                        "filter_clean_interval",
+                    ): int,
+
+                    vol.Optional(
+                        "last_filter_maintenance_date",
+                    ): str,
+
+                    vol.Optional(
+                        "filter_maintenance_interval",
+                    ): int,
+
+                    vol.Optional(
+                        "last_partial_water_change_date",
+                    ): str,
+
+                    vol.Optional(
+                        "partial_water_change_interval",
+                    ): int,
+
+                    vol.Optional(
+                        "last_hungry_day_date",
+                    ): str,
+
+                    vol.Optional(
+                        "hungry_day_interval",
+                    ): int,
                 }
             ),
         )
