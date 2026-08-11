@@ -1,2 +1,19 @@
-# ha_aquarium_manager
-Home Assistant Aquarium Manager is a custom integration for managing freshwater and planted aquariums. Track water parameters, maintenance schedules, fertilizer dosing, filter cleaning, water changes, aquarium age, reminders, notifications, and dashboard entities from a single integration.
+# Aquarium Manager
+
+<p align="center">
+  <img src="images/logo.png" width="250istant integration for aquarium management.
+
+## Features
+
+- Aquarium age tracking
+- Water test reminders
+- Water change tracking
+- Filter maintenance
+- Fertilizer scheduling
+- Fe tablet scheduling
+- Dashboard entities
+- Future HACS support
+
+## Development Status
+
+Current version: `0.0.2`
