@@ -3,8 +3,6 @@ import voluptuous as vol
 from homeassistant import config_entries
 from homeassistant.helpers.selector import (
     DateSelector,
-    NumberSelector,
-    NumberSelectorConfig,
 )
 
 from .const import DOMAIN
@@ -45,13 +43,7 @@ class AquariumManagerConfigFlow(
 
                     vol.Optional(
                         "water_test_interval",
-                    ): NumberSelector(
-                        NumberSelectorConfig(
-                            min=1,
-                            max=365,
-                            step=1,
-                        )
-                    ),
+                    ): int,
 
                     vol.Optional(
                         "last_filter_clean_date",
@@ -59,13 +51,7 @@ class AquariumManagerConfigFlow(
 
                     vol.Optional(
                         "filter_clean_interval",
-                    ): NumberSelector(
-                        NumberSelectorConfig(
-                            min=1,
-                            max=365,
-                            step=1,
-                        )
-                    ),
+                    ): int,
 
                     vol.Optional(
                         "last_filter_maintenance_date",
@@ -73,13 +59,7 @@ class AquariumManagerConfigFlow(
 
                     vol.Optional(
                         "filter_maintenance_interval",
-                    ): NumberSelector(
-                        NumberSelectorConfig(
-                            min=1,
-                            max=365,
-                            step=1,
-                        )
-                    ),
+                    ): int,
 
                     vol.Optional(
                         "last_partial_water_change_date",
@@ -87,13 +67,7 @@ class AquariumManagerConfigFlow(
 
                     vol.Optional(
                         "partial_water_change_interval",
-                    ): NumberSelector(
-                        NumberSelectorConfig(
-                            min=1,
-                            max=365,
-                            step=1,
-                        )
-                    ),
+                    ): int,
 
                     vol.Optional(
                         "last_hungry_day_date",
@@ -101,13 +75,7 @@ class AquariumManagerConfigFlow(
 
                     vol.Optional(
                         "hungry_day_interval",
-                    ): NumberSelector(
-                        NumberSelectorConfig(
-                            min=1,
-                            max=365,
-                            step=1,
-                        )
-                    ),
+                    ): int,
                 }
             ),
         )
