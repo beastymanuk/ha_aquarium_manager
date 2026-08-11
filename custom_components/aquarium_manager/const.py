@@ -1,0 +1,1 @@
+DOMAIN = "aquarium_manager"
