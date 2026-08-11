@@ -2,17 +2,32 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.6] - 2026-08-11
+
+### Added
+
+- Date picker support for all date fields
+- Human readable configuration labels
+
+### Improved
+
+- Replaced interval sliders with numeric input fields
+
 ## [0.0.5] - 2026-08-11
 
 ### Added
 
-- Water Test tracking
-- Filter Clean tracking
-- Filter Maintenance tracking
-- Partial Water Change tracking
-- Hungry Day tracking
+- Aquarium Manager device support
+- Days Since Water Test sensor
+- Days Since Filter Clean sensor
+- Days Since Filter Maintenance sensor
+- Days Since Partial Water Change sensor
+- Days Since Hungry Day sensor
 - Shared maintenance sensor base class
-- Aquarium Manager device grouping
+
+### Improved
+
+- Grouped all entities under a single Aquarium Manager device
 
 ## [0.0.3] - 2026-08-11
 
