@@ -1,19 +1,27 @@
 # Aquarium Manager
 
-Custom Home Assistant integration for aquarium management.
-
-## Current Version
-
-0.0.2
+Custom Home Assistant integration for aquarium maintenance and monitoring.
 
 ## Features
 
 - Aquarium age tracking
-- Config Flow support
-- Future maintenance tracking
-- Future fertilizer scheduling
-- Future water parameter management
+- Maintenance tracking
+- Water test tracking
+- Water change reminders
+- Filter cleaning reminders
+- Fertilizer scheduling
+- Fe tablet scheduling
 
-## Changelog
+## Installation
+
+Copy the `aquarium_manager` folder into:
+
+/config/custom_components/
+
+Restart Home Assistant and add the integration from:
+
+Settings → Devices & Services
+
+## Releases
 
 See CHANGELOG.md
