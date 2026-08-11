@@ -1,19 +1,19 @@
 # Aquarium Manager
 
-<p align="center">
-  <img src="images/logo.png" width="250istant integration for aquarium management.
+Custom Home Assistant integration for aquarium management.
+
+## Current Version
+
+0.0.2
 
 ## Features
 
 - Aquarium age tracking
-- Water test reminders
-- Water change tracking
-- Filter maintenance
-- Fertilizer scheduling
-- Fe tablet scheduling
-- Dashboard entities
-- Future HACS support
+- Config Flow support
+- Future maintenance tracking
+- Future fertilizer scheduling
+- Future water parameter management
 
-## Development Status
+## Changelog
 
-Current version: `0.0.2`
+See CHANGELOG.md
