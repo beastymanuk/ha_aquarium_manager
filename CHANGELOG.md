@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.6.5] - 2026-08-13
+
+### Added
+
+- Aquarium Manager branding assets
+- Integration icon
+- Integration logo
+
+### Improved
+
+- Replaced missing integration icon
+- Improved visual appearance in Home Assistant
+- Enhanced project branding
+
 ## [0.0.6.4] - 2026-08-13
 
 ### Fixed
