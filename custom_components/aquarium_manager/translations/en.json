@@ -1,5 +1,9 @@
 {
   "config": {
+    "error": {
+      "future_date": "Date cannot be in the future",
+      "required_start_date": "Aquarium Start Date is required"
+    },
     "step": {
       "user": {
         "title": "Aquarium Manager",
@@ -24,10 +28,6 @@
           "hungry_day_interval": "Hungry Day Interval (Days)"
         }
       }
-    },
-    "error": {
-      "future_date": "Date cannot be in the future",
-      "required_start_date": "Aquarium Start Date is required"
     }
   }
 }
