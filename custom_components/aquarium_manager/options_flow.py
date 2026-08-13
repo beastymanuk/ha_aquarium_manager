@@ -63,16 +63,22 @@ class AquariumManagerOptionsFlow(
                 {
                     vol.Required(
                         "aquarium_name",
-                        default=self._config_entry.data.get(
+                        default=self._config_entry.options.get(
                             "aquarium_name",
-                            "",
+                            self._config_entry.data.get(
+                                "aquarium_name",
+                                "",
+                            ),
                         ),
                     ): str,
 
                     vol.Optional(
                         "start_date",
-                        default=self._config_entry.data.get(
+                        default=self._config_entry.options.get(
                             "start_date",
+                            self._config_entry.data.get(
+                                "start_date",
+                            ),
                         ),
                     ): selector.DateSelector(),
                 }
@@ -134,72 +140,47 @@ class AquariumManagerOptionsFlow(
                 {
                     vol.Optional(
                         "last_water_test_date",
-                        default=self._config_entry.data.get(
-                            "last_water_test_date",
-                        ),
                     ): selector.DateSelector(),
 
                     vol.Optional(
                         "water_test_interval",
-                        default=self._config_entry.data.get(
-                            "water_test_interval",
-                        ),
+                        default=0,
                     ): int,
 
                     vol.Optional(
                         "last_filter_clean_date",
-                        default=self._config_entry.data.get(
-                            "last_filter_clean_date",
-                        ),
                     ): selector.DateSelector(),
 
                     vol.Optional(
                         "filter_clean_interval",
-                        default=self._config_entry.data.get(
-                            "filter_clean_interval",
-                        ),
+                        default=0,
                     ): int,
 
                     vol.Optional(
                         "last_filter_maintenance_date",
-                        default=self._config_entry.data.get(
-                            "last_filter_maintenance_date",
-                        ),
                     ): selector.DateSelector(),
 
                     vol.Optional(
                         "filter_maintenance_interval",
-                        default=self._config_entry.data.get(
-                            "filter_maintenance_interval",
-                        ),
+                        default=0,
                     ): int,
 
                     vol.Optional(
                         "last_partial_water_change_date",
-                        default=self._config_entry.data.get(
-                            "last_partial_water_change_date",
-                        ),
                     ): selector.DateSelector(),
 
                     vol.Optional(
                         "partial_water_change_interval",
-                        default=self._config_entry.data.get(
-                            "partial_water_change_interval",
-                        ),
+                        default=0,
                     ): int,
 
                     vol.Optional(
                         "last_hungry_day_date",
-                        default=self._config_entry.data.get(
-                            "last_hungry_day_date",
-                        ),
                     ): selector.DateSelector(),
 
                     vol.Optional(
                         "hungry_day_interval",
-                        default=self._config_entry.data.get(
-                            "hungry_day_interval",
-                        ),
+                        default=0,
                     ): int,
                 }
             ),

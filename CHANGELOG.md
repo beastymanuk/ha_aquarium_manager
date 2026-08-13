@@ -8,20 +8,19 @@ All notable changes to this project will be documented in this file.
 
 - Configuration editing support
 - Options Flow integration
-- Configure button support
 - Two-step configuration editing wizard
 
 ### Added Validation
 
-- Aquarium Start Date validation in Configure workflow
-- Future date validation in Configure workflow
+- Aquarium Start Date validation
+- Future date validation
+- Maintenance date validation
 
 ### Improved
 
-- Aquarium settings can now be modified after creation
-- Maintenance settings can be updated without recreating the integration
-- Improved Home Assistant user experience
-- Consistent validation between setup and configuration flows
+- Aquarium configuration can now be edited after creation
+- Improved setup consistency
+- Better Home Assistant user experience
 
 ## [0.0.7] - 2026-08-13
 

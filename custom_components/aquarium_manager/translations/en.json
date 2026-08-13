@@ -13,44 +13,50 @@
           "start_date": "Aquarium Start Date"
         }
       },
-
       "water_testing": {
         "title": "Maintenance Settings",
         "description": "Configure maintenance schedules",
         "data": {
           "last_water_test_date": "Last Water Test Date",
           "water_test_interval": "Water Test Interval (Days)",
-
           "last_filter_clean_date": "Last Filter Clean Date",
           "filter_clean_interval": "Filter Clean Interval (Days)",
-
           "last_filter_maintenance_date": "Last Filter Maintenance Date",
           "filter_maintenance_interval": "Filter Maintenance Interval (Days)",
-
           "last_partial_water_change_date": "Last Partial Water Change Date",
           "partial_water_change_interval": "Partial Water Change Interval (Days)",
-
           "last_hungry_day_date": "Last Hungry Day Date",
           "hungry_day_interval": "Hungry Day Interval (Days)"
         }
+      }
+    }
+  },
+  "options": {
+    "error": {
+      "future_date": "Date cannot be in the future",
+      "required_start_date": "Aquarium Start Date is required"
+    },
+    "step": {
+      "init": {
+        "title": "Aquarium Information",
+        "description": "Edit aquarium settings",
+        "data": {
+          "aquarium_name": "Aquarium Name",
+          "start_date": "Aquarium Start Date"
+        }
       },
-
       "maintenance": {
         "title": "Maintenance Settings",
         "description": "Update maintenance dates and intervals",
         "data": {
           "last_water_test_date": "Last Water Test Date",
           "water_test_interval": "Water Test Interval (Days)",
-
           "last_filter_clean_date": "Last Filter Clean Date",
           "filter_clean_interval": "Filter Clean Interval (Days)",
-
           "last_filter_maintenance_date": "Last Filter Maintenance Date",
           "filter_maintenance_interval": "Filter Maintenance Interval (Days)",
-
           "last_partial_water_change_date": "Last Partial Water Change Date",
           "partial_water_change_interval": "Partial Water Change Interval (Days)",
-
           "last_hungry_day_date": "Last Hungry Day Date",
           "hungry_day_interval": "Hungry Day Interval (Days)"
         }
