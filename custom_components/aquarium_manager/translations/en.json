@@ -6,12 +6,17 @@
     },
     "step": {
       "user": {
-        "title": "Aquarium Manager",
+        "title": "Aquarium Information",
         "description": "Configure your aquarium",
         "data": {
           "aquarium_name": "Aquarium Name",
-          "start_date": "Aquarium Start Date",
-
+          "start_date": "Aquarium Start Date"
+        }
+      },
+      "water_testing": {
+        "title": "Maintenance Settings",
+        "description": "Configure maintenance schedules",
+        "data": {
           "last_water_test_date": "Last Water Test Date",
           "water_test_interval": "Water Test Interval (Days)",
 

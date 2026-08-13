@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.7] - 2026-08-13
+
+### Added
+
+- First Setup Wizard implementation
+- Aquarium Information step
+- Maintenance Settings step
+
+### Improved
+
+- Reduced configuration complexity
+- Better onboarding experience
+- Multi-step aquarium configuration
+
 ## [0.0.6.5] - 2026-08-13
 
 ### Added

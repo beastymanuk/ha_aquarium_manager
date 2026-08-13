@@ -14,6 +14,9 @@ class AquariumManagerConfigFlow(
 ):
     VERSION = 1
 
+    def __init__(self):
+        self._config_data = {}
+
     async def async_step_user(
         self,
         user_input=None,
@@ -29,10 +32,41 @@ class AquariumManagerConfigFlow(
                     "required_start_date"
                 )
 
+            if not errors:
+                self._config_data.update(
+                    user_input
+                )
+
+                return await self.async_step_water_testing()
+
+        return self.async_show_form(
+            step_id="user",
+            errors=errors,
+            data_schema=vol.Schema(
+                {
+                    vol.Required(
+                        "aquarium_name",
+                        default="My Aquarium",
+                    ): str,
+
+                    vol.Optional(
+                        "start_date",
+                    ): selector.DateSelector(),
+                }
+            ),
+        )
+
+    async def async_step_water_testing(
+        self,
+        user_input=None,
+    ):
+        errors = {}
+
+        if user_input is not None:
+
             today = date.today()
 
             date_fields = [
-                "start_date",
                 "last_water_test_date",
                 "last_filter_clean_date",
                 "last_filter_maintenance_date",
@@ -52,25 +86,23 @@ class AquariumManagerConfigFlow(
                         errors[field] = "future_date"
 
             if not errors:
+
+                self._config_data.update(
+                    user_input
+                )
+
                 return self.async_create_entry(
-                    title=user_input["aquarium_name"],
-                    data=user_input,
+                    title=self._config_data[
+                        "aquarium_name"
+                    ],
+                    data=self._config_data,
                 )
 
         return self.async_show_form(
-            step_id="user",
+            step_id="water_testing",
             errors=errors,
             data_schema=vol.Schema(
                 {
-                    vol.Required(
-                        "aquarium_name",
-                        default="My Aquarium",
-                    ): str,
-
-                    vol.Optional(
-                        "start_date",
-                    ): selector.DateSelector(),
-
                     vol.Optional(
                         "last_water_test_date",
                     ): selector.DateSelector(),
