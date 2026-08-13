@@ -1,4 +1,5 @@
 from datetime import date
+import logging
 
 import voluptuous as vol
 
@@ -6,6 +7,8 @@ from homeassistant import config_entries
 from homeassistant.helpers import selector
 
 from .const import DOMAIN
+
+LOGGER = logging.getLogger(__name__)
 
 
 class AquariumManagerConfigFlow(
@@ -21,7 +24,12 @@ class AquariumManagerConfigFlow(
         errors = {}
 
         if user_input is not None:
-            print("AQUARIUM_MANAGER_DEBUG:", user_input)
+
+            LOGGER.warning(
+                "AQUARIUM_MANAGER_DEBUG: %s",
+                user_input,
+            )
+
             today = date.today()
 
             date_fields = [
