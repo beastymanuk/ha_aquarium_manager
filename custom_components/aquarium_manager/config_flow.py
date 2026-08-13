@@ -1,9 +1,9 @@
+from datetime import date
+
 import voluptuous as vol
 
 from homeassistant import config_entries
-from homeassistant.helpers.selector import (
-    DateSelector,
-)
+from homeassistant.helpers import selector
 
 from .const import DOMAIN
 
@@ -18,14 +18,36 @@ class AquariumManagerConfigFlow(
         self,
         user_input=None,
     ):
+        errors = {}
+
         if user_input is not None:
-            return self.async_create_entry(
-                title=user_input["aquarium_name"],
-                data=user_input,
-            )
+
+            today = date.today()
+
+            date_fields = [
+                "start_date",
+                "last_water_test_date",
+                "last_filter_clean_date",
+                "last_filter_maintenance_date",
+                "last_partial_water_change_date",
+                "last_hungry_day_date",
+            ]
+
+            for field in date_fields:
+                value = user_input.get(field)
+
+                if value and value > today:
+                    errors[field] = "future_date"
+
+            if not errors:
+                return self.async_create_entry(
+                    title=user_input["aquarium_name"],
+                    data=user_input,
+                )
 
         return self.async_show_form(
             step_id="user",
+            errors=errors,
             data_schema=vol.Schema(
                 {
                     vol.Required(
@@ -35,11 +57,11 @@ class AquariumManagerConfigFlow(
 
                     vol.Required(
                         "start_date",
-                    ): DateSelector(),
+                    ): selector.DateSelector(),
 
                     vol.Optional(
                         "last_water_test_date",
-                    ): DateSelector(),
+                    ): selector.DateSelector(),
 
                     vol.Optional(
                         "water_test_interval",
@@ -47,7 +69,7 @@ class AquariumManagerConfigFlow(
 
                     vol.Optional(
                         "last_filter_clean_date",
-                    ): DateSelector(),
+                    ): selector.DateSelector(),
 
                     vol.Optional(
                         "filter_clean_interval",
@@ -55,7 +77,7 @@ class AquariumManagerConfigFlow(
 
                     vol.Optional(
                         "last_filter_maintenance_date",
-                    ): DateSelector(),
+                    ): selector.DateSelector(),
 
                     vol.Optional(
                         "filter_maintenance_interval",
@@ -63,7 +85,7 @@ class AquariumManagerConfigFlow(
 
                     vol.Optional(
                         "last_partial_water_change_date",
-                    ): DateSelector(),
+                    ): selector.DateSelector(),
 
                     vol.Optional(
                         "partial_water_change_interval",
@@ -71,7 +93,7 @@ class AquariumManagerConfigFlow(
 
                     vol.Optional(
                         "last_hungry_day_date",
-                    ): DateSelector(),
+                    ): selector.DateSelector(),
 
                     vol.Optional(
                         "hungry_day_interval",

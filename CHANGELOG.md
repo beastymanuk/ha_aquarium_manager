@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.6.2] - 2026-08-13
+
+### Added
+
+- Validation for all aquarium date fields
+- Prevention of future dates in configuration
+- User-friendly validation messages
+
+### Improved
+
+- Enhanced configuration data validation
+
+
 ## [0.0.6] - 2026-08-11
 
 ### Added
