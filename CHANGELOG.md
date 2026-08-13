@@ -2,21 +2,24 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.0.6.2] - 2026-08-13
+## [0.0.6.3] - 2026-08-13
 
 ### Fixed
 
-- Fixed DateSelector parsing issue
+- Fixed DateSelector parsing issues
 - Fixed "Unknown error occurred" during configuration
+- Fixed date comparison logic in Config Flow
 
 ### Added
 
-- Validation for future dates
-- User-friendly validation messages
+- Validation for all aquarium date fields
+- Prevention of future dates
+- User-friendly validation error messages
 
 ### Improved
 
-- Enhanced configuration validation
+- Improved configuration flow reliability
+- Better handling of optional date fields
 
 ## [0.0.6.2] - 2026-08-13
 
