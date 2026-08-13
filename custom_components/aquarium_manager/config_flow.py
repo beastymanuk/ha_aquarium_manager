@@ -7,6 +7,8 @@ from homeassistant.helpers import selector
 
 from .const import DOMAIN
 
+from .options_flow import AquariumManagerOptionsFlow
+
 
 class AquariumManagerConfigFlow(
     config_entries.ConfigFlow,
@@ -16,6 +18,14 @@ class AquariumManagerConfigFlow(
 
     def __init__(self):
         self._config_data = {}
+    
+    @staticmethod
+    def async_get_options_flow(
+        config_entry,
+    ):
+        return AquariumManagerOptionsFlow(
+            config_entry
+        )
 
     async def async_step_user(
         self,

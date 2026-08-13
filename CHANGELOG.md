@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.8] - 2026-08-13
+
+### Added
+
+- Options Flow support
+- Aquarium configuration editing
+- Configure button support in Home Assistant
+
+### Improved
+
+- Aquarium settings can now be modified without deleting and recreating the integration
+- Better Home Assistant user experience
+
 ## [0.0.7] - 2026-08-13
 
 ### Added
