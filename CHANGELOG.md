@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.8.1] - 2026-08-13
+
+### Fixed
+
+- Fixed Configuration Editing wizard validation
+- Fixed maintenance field parsing errors
+- Fixed integer field handling in Options Flow
+- Fixed translation support for Options Flow
+
+### Improved
+
+- Improved Configure workflow stability
+- Improved options form usability
+- Better compatibility with Home Assistant selectors
+
 ## [0.0.8] - 2026-08-13
 
 ### Added
