@@ -36,8 +36,13 @@ class AquariumManagerConfigFlow(
             for field in date_fields:
                 value = user_input.get(field)
 
-                if value and value > today:
-                    errors[field] = "future_date"
+                if value:
+                    selected_date = date.fromisoformat(
+                        value
+                    )
+
+                    if selected_date > today:
+                        errors[field] = "future_date"
 
             if not errors:
                 return self.async_create_entry(
