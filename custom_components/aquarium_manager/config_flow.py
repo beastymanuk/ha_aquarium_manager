@@ -21,7 +21,7 @@ class AquariumManagerConfigFlow(
         errors = {}
 
         if user_input is not None:
-
+            print("AQUARIUM_MANAGER_DEBUG:", user_input)
             today = date.today()
 
             date_fields = [
