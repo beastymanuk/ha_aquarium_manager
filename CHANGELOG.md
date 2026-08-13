@@ -6,15 +6,21 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 
-- First Setup Wizard implementation
+- Multi-step Setup Wizard
 - Aquarium Information step
 - Maintenance Settings step
 
+### Added Validation
+
+- Required Aquarium Start Date validation
+- Future date validation for all maintenance dates
+- Future date validation for Aquarium Start Date
+
 ### Improved
 
+- Simplified aquarium onboarding
 - Reduced configuration complexity
-- Better onboarding experience
-- Multi-step aquarium configuration
+- Better setup experience
 
 ## [0.0.6.5] - 2026-08-13
 

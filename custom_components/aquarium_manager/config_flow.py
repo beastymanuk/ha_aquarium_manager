@@ -32,6 +32,22 @@ class AquariumManagerConfigFlow(
                     "required_start_date"
                 )
 
+            start_date = user_input.get(
+                "start_date"
+            )
+
+            if start_date:
+                selected_date = (
+                    date.fromisoformat(
+                        start_date
+                    )
+                )
+
+                if selected_date > date.today():
+                    errors["start_date"] = (
+                        "future_date"
+                    )
+
             if not errors:
                 self._config_data.update(
                     user_input
@@ -78,12 +94,16 @@ class AquariumManagerConfigFlow(
                 value = user_input.get(field)
 
                 if value:
-                    selected_date = date.fromisoformat(
-                        value
+                    selected_date = (
+                        date.fromisoformat(
+                            value
+                        )
                     )
 
                     if selected_date > today:
-                        errors[field] = "future_date"
+                        errors[field] = (
+                            "future_date"
+                        )
 
             if not errors:
 
