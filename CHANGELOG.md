@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.6.4] - 2026-08-13
+
+### Fixed
+
+- Fixed aquarium start date workflow
+- Fixed DateSelector initial value behaviour
+- Improved date validation messages
+
+### Added
+
+- Required Aquarium Start Date validation
+- User-friendly validation messages
+
+### Improved
+
+- Improved aquarium creation experience
+
 ## [0.0.6.3] - 2026-08-13
 
 ### Fixed
